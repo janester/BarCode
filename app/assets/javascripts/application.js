@@ -12,4 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery.remotipart
+//= require 'jquery-ui/js/jquery-ui-1.10.2.custom.min.js'
+//= require 'foundation_4/js/vendor/custom.modernizr.js'
+//= require 'foundation_4/js/vendor/zepto.js'
+//= require 'foundation_4/js/foundation.min.js'
+//= require 'underscore-min'
+//= require 'sugar'
+//= require 'moment'
+
+
