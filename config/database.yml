@@ -1,0 +1,27 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: barcode_development
+  pool: 5
+  host: localhost
+  username: janesternbach
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: barcode_test
+  pool: 5
+  host: localhost
+  username: janesternbach
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: barcode_production
+  pool: 5
+  host: localhost
+  username: janesternbach
+  password:
