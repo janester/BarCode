@@ -1,0 +1,7 @@
+var a = $("<a>").addClass("close-reveal-modal").text("×");
+$("#modal").empty().append("<%=j render 'availabilities/form' %>").append(a);
+$("#modal").foundation("reveal", "open");
+$("#dates").multiDatesPicker({
+  dateFormat: "yy-mm-dd"
+});
+a.click(function(){$("#modal").foundation("reveal", "close");});

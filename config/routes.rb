@@ -6,4 +6,11 @@ Barcode::Application.routes.draw do
       delete :destroy
     end
   end
+  resources :venues, :except => [:index, :show] do
+    member do
+      get "new_availabilities"
+      post "create_availabilities"
+    end
+  end
+  resources :availabilities, :only => [:edit, :update, :destroy]
 end

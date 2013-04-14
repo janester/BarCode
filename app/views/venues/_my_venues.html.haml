@@ -1,0 +1,28 @@
+%ul.large-block-grid-2
+  -@cu.venues.order(:name).each do |venue|
+    %li
+      .row
+        .large-6.columns
+          = image_tag(venue.image.thumb.url)
+        .large-6.columns
+          %h3= venue.name
+          %p= venue.address
+          = link_to("Edit", edit_venue_path(venue.id), :remote => true, :class => "button radius tiny")
+          = link_to("Delete", "/venues/#{venue.id}", :method => :delete, :remote => true, :class => "button radius tiny alert", :confirm => "Are you sure you want to delete this venue?")
+          = link_to("Availabilities", new_availabilities_venue_path(venue.id), :remote => true, :class => "button radius tiny")
+
+      .row
+        .large-12.columns
+          %h5 Availabilities
+          %table{:style => "width: 100%"}
+            %thead
+              %th Date
+              %th Promotion
+              %th
+              %th
+            -venue.availabilities.order(:date).each do |ava|
+              %tr
+                %td= ava.date
+                %td= ava.promotion
+                %td= link_to("Edit", edit_availability_path(ava.id), :remote => true, :class => "button radius tiny")
+                %td= link_to("Delete", "/availabilities/#{ava.id}", :method => :delete, :remote => true, :confirm => "Are you sure you want to delete this availability?", :class => "button radius tiny alert")
