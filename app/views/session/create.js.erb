@@ -1,0 +1,6 @@
+<% if @cu.present? %>
+  $("#uforms").empty().text("You Have Successfully Logged In").fadeOut(3000);
+  $("#nav").empty().append("<%=j render :partial => 'layouts/nav' %>");
+<% else %>
+  $("#uforms").effect("shake", 200)
+<% end %>
