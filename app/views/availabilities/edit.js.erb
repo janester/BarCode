@@ -1,0 +1,5 @@
+var a = $("<a>").addClass("close-reveal-modal").text("×");
+$("#modal").empty().append("<%=j render 'availabilities/edit_form' %>").append(a);
+$("#modal").foundation("reveal", "open");
+$("#availability_date").datepicker({dateFormat:"yy-mm-dd"});
+a.click(function(){$("#modal").foundation("reveal", "close");});

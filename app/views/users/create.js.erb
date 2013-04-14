@@ -1,0 +1,6 @@
+<% if @user.valid? %>
+  $("#uforms").empty()
+  $("#nav").empty().append("<%=j render :partial => 'layouts/nav' %>");
+<% else %>
+  $("#uforms").effect("shake", 200)
+<% end %>

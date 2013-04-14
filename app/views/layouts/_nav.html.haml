@@ -1,0 +1,23 @@
+%nav.top-bar
+  %section.top-bar-section
+    / Left Nav Section
+    %ul.left
+      %li.divider
+      %li
+        %a{:href=>"/"} Home
+      %li.divider
+
+    / Right Nav Section
+    %ul.right
+      -if @cu.nil?
+        %li.divider
+        %li= link_to("Register", new_user_path, :remote => true)
+        %li.divider
+        %li= link_to("Login", new_session_path, :remote => true)
+      -else
+        %li.divider
+        %li= link_to("#{@cu.name}", "#")
+        %li.divider
+        %li= link_to("Logout", session_index_path, :method => :delete)
+
+

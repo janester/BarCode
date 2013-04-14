@@ -1,4 +1,5 @@
 .row
+<<<<<<< HEAD
   .large-12.columns
     %h1 BarCode
 
@@ -8,3 +9,16 @@
     %h1.main_button#create Create a Pub Crawl
     %h1.main_button#add_bar Add Your Bar
     %h1.main_button#activity Add an Activity
+=======
+  .large-12.columns#owner_content
+    =render :partial => "home/owner_content"
+.row
+  .large-12.columns#regular_content
+    =render :partial => "home/regular_content"
+
+#modal.reveal-modal.medium
+  %a.close-reveal-modal ×
+
+
+
+>>>>>>> e2d8a1f9e6630983fe9cf59b00002425c8633860

@@ -1,0 +1,2 @@
+$("#modal").foundation("reveal", "close");
+$("#venue_availabilities").empty().append("<%=j render :partial => 'venues/availabilities', :locals => {:venue => @venue} %>");

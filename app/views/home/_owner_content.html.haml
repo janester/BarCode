@@ -1,0 +1,11 @@
+-if @cu.present? && @cu.is_owner
+  #add{:style => "text-align:center"}
+    =link_to("Add Venue", new_venue_path, :remote => true, :class => "button radius", :id => "add_venue_btn")
+  .row
+    .large-5.large-centered.columns#venue_form
+
+  .row
+    .large-12.columns
+      %h2 My Venues
+      #my_venues
+        = render 'venues/my_venues'
