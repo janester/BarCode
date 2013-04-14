@@ -14,11 +14,14 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require 'jquery-ui/js/jquery-ui-1.10.2.custom.min.js'
+//= require 'jquery-ui.multidatespicker.js'
 //= require 'foundation_4/js/vendor/custom.modernizr.js'
 //= require 'foundation_4/js/vendor/zepto.js'
 //= require 'foundation_4/js/foundation.min.js'
 //= require 'underscore-min'
 //= require 'sugar'
 //= require 'moment'
+//= require 'barcode'
+
 
 

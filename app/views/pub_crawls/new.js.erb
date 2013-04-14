@@ -1,0 +1,5 @@
+var a = $("<a>").addClass("close-reveal-modal").text("×");
+$("#modal").empty().append("<%=j render 'pub_crawls/form' %>").append(a);
+$("#modal").foundation("reveal", "open");
+a.click(function(){$("#modal").foundation("reveal", "close");});
+$("#pub_crawl_date").datepicker({dateFormat:"yy-mm-dd"});

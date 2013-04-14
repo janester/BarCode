@@ -2,11 +2,11 @@
 
 FactoryGirl.define do
   factory :venue do
+    user_id 1
     address "MyString"
     latitude 1.5
     longitude 1.5
     image "MyString"
     name "MyString"
-    user_id "MyString"
   end
 end
