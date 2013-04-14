@@ -1,1 +1,1 @@
-$("#my_venues").empty().append("<%=j render 'venues/my_venues'%>");
+$("#venue_availabilities").empty().append("<%=j render :partial => 'venues/availabilities', :locals => {:venue => @venue} %>");

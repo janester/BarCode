@@ -33,6 +33,7 @@ class VenuesController < ApplicationController
         venue.availabilities << Availability.create(date:date, promotion:params[:promotion])
       end
     end
+    @venue = venue
   end
 
 
