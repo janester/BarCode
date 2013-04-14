@@ -1,0 +1,21 @@
+%ul.large-block-grid-2
+  -@crawls.each do |crawl|
+    %li
+      .row
+        .large-12.columns
+          %h3= crawl.name
+      .row
+        .large-6.columns
+          %p= "Start: #{crawl.start_time}"
+        .large-6.columns
+          %p= "End: #{crawl.end_time}"
+      .row
+        .large-12.columns
+          %h5 Sarting Location:
+      / .row
+      /   -crawl.stops.first.venue do |venue|
+      /     .large-6.columns
+      /       = image_tag(venue.image.thumb.url)
+      /     .large-6.columns
+      /       %h3= venue.name
+      /       %p= venue.address

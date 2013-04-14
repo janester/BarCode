@@ -13,4 +13,9 @@ Barcode::Application.routes.draw do
     end
   end
   resources :availabilities, :only => [:edit, :update, :destroy]
+  resources :pub_crawls, :except => [:index, :show] do
+    collection do
+      get "end_times"
+    end
+  end
 end

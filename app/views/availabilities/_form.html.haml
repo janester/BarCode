@@ -1,7 +1,8 @@
-%h3= "Please select all the dates you would like to make #{@venue.name} available for a Pub Crawl:"
+%h3= "Select the dates your #{@venue.name} promotion will run:"
 =form_tag create_availabilities_venue_path, :remote => true do
   %fieldset
     %legend Availabilities
+    #calendar{style:"text-align:center;"}
     =label_tag :dates
     =text_field_tag :dates
     =label_tag :promotion
