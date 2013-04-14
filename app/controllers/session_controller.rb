@@ -10,6 +10,7 @@ class SessionController < ApplicationController
       session[:user_id] = nil
     end
     authenticate
+    @crawls = PubCrawl.all
   end
 
   def destroy

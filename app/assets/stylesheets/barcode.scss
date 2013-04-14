@@ -18,3 +18,21 @@ font-family: 'Lobster', cursive;
   border-radius: 20px;
   border: 1px solid red;
 }
+
+/* begin: jQuery UI Datepicker emphasis on selected dates */
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight a {
+  background: #333 none; /* a color that fits the widget theme */
+  color: white; /* a color that is readeable with the color above */
+}
+.ui-datepicker {
+  margin: auto;
+}
+/* end: jQuery UI Datepicker emphasis on selected dates */
+
+select {
+  margin: 15px 0px 15px 0px;
+}
+
+.hide {
+  display: hidden;
+}

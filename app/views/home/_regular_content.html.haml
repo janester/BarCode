@@ -1,2 +1,6 @@
 -if @cu.present? && @cu.is_owner == false
-  =link_to("Make a Pub Crawl", "#", :class => "button radius")
+  =link_to("Make a Pub Crawl", new_pub_crawl_path, :remote => true, :class => "button radius")
+  #make_crawl
+  %h2 Pub Crawls
+  #all_crawls
+    = render :partial => "pub_crawls/all_crawls"
