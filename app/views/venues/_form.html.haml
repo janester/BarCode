@@ -1,6 +1,6 @@
 = form_for @venue, :html => {:multipart => true}, :remote => true do |f|
-  %fieldset
-    %legend= @venue.name.nil? ? "New Venue" : "#{@venue.name}"
+  %fieldset#new_venue
+    %legend#new_venue_form_head= @venue.name.nil? ? "New Venue" : "#{@venue.name}"
     =f.label :name
     =f.text_field :name
     =f.label :addres
