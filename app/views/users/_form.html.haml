@@ -1,21 +1,17 @@
-=form_for @user, :remote => true do |f|
-  =f.label :name
-  =f.text_field :name, :autofocus => true
-  =f.label :email
-  =f.text_field :email
-  =f.label :phone
-  =f.telephone_field :phone
-  =f.label :address
-  =f.text_field :address
-  =f.label :password
-  =f.password_field :password
-  =f.label :password_confirmation
-  =f.password_field :password_confirmation
-  %label Are You a Venue Owner?
-  .switch.small.round.small-3.small-centered
-    %input#z{:name => "is_owner", :type => "radio", :value => "true"}
-    %label{:for => "z", :onclick => ""} Yes
-    %input#z1{:checked => "checked", :name => "is_owner", :type => "radio", :value => "false"}
-    %label{:for => "z1", :onclick => ""} No
-    %span
-  =f.submit
+%form
+  %fieldset
+    =form_for @user, :id => 'register_form', :remote => true do |f|
+      =f.text_field :name, :placeholder => 'Name'
+      =f.text_field :email, :placeholder => 'Email'
+      =f.telephone_field :phone, :placeholder => 'phone'
+      =f.text_field :address, :placeholder => 'Address'
+      =f.password_field :password, :placeholder => 'Password'
+      =f.password_field :password_confirmation, :placeholder => 'Confirm password'
+      %label Are You a Venue Owner?
+      .switch.small.round.small-3.small-centered
+        %input#z{:name => "is_owner", :type => "radio", :value => "true"}
+        %label{:for => "z", :onclick => ""} Yes
+        %input#z1{:checked => "checked", :name => "is_owner", :type => "radio", :value => "false"}
+        %label{:for => "z1", :onclick => ""} No
+        %span
+      =f.submit

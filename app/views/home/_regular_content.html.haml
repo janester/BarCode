@@ -1,5 +1,7 @@
 -if @cu.present? && @cu.is_owner == false
-  =link_to("Make a Pub Crawl", new_pub_crawl_path, :remote => true, :class => "button radius")
+  / =link_to("Make a Pub Crawl", new_pub_crawl_path, :remote => true, :class => "button radius")
+  =link_to(image_tag("create_crawl_coaster.jpg"), new_pub_crawl_path, :remote => true)
+  =link_to(image_tag("start_crawl_coaster.jpg"), '#', :remote => true)
   #make_crawl
   %h2 Pub Crawls
   #all_crawls

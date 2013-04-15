@@ -1,23 +1,35 @@
-%nav.top-bar
-  %section.top-bar-section
-    / Left Nav Section
-    %ul.left
-      %li.divider
-      %li
-        %a{:href=>"/"} Home
-      %li.divider
+/ %nav.top-bar
+/   %section.top-bar-section
+/     / Left Nav Section
+/     %ul.left
+/       %li.divider
+/       %li.login
+/         %a{:href=>"/"} Home
+/       %li.divider
 
-    / Right Nav Section
-    %ul.right
+/     / Right Nav Section
+/     %ul.right
+/       -if @cu.nil?
+/         %li.divider
+/         / %li= link_to("Register", new_user_path, :class => 'login', :remote => true)
+/         %li= link_to(image_tag("register_coaster.jpg"), new_user_path, :class => 'login', :remote => true)
+/         %li.divider
+/         / %li= link_to("Login", new_session_path, :class => 'login', :remote => true)
+/         %li= link_to(image_tag("login_coaster.jpg"), new_session_path, :class => 'login', :remote => true)
+/       -else
+/         %li.divider
+/         %li= link_to("#{@cu.name}", "#", :class => 'login')
+/         %li.divider
+/         %li= link_to("Logout", session_index_path, :class => 'login', :method => :delete)
+.row
+  .large-twelve.columns
+    %ul.center
       -if @cu.nil?
         %li.divider
-        %li= link_to("Register", new_user_path, :remote => true)
+        %li= link_to(image_tag("register_coaster.jpg"), new_user_path, :class => 'login', :remote => true)
         %li.divider
-        %li= link_to("Login", new_session_path, :remote => true)
+        %li= link_to(image_tag("login_coaster.jpg"), new_session_path, :class => 'login', :remote => true)
       -else
+        %li= link_to("#{@cu.name}", "#", :class => 'login_info')
         %li.divider
-        %li= link_to("#{@cu.name}", "#")
-        %li.divider
-        %li= link_to("Logout", session_index_path, :method => :delete)
-
-
+        %li= link_to("Logout", session_index_path, :class => 'login_info', :method => :delete)
