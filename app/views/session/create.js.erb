@@ -1,5 +1,5 @@
 <% if @cu.present? %>
-  $("#uforms").empty().text("You Have Successfully Logged In").fadeOut(3000);
+  $("#uforms").empty().text("Cheers!").fadeOut(3000);
   $("#nav").empty().append("<%=j render :partial => 'layouts/nav' %>");
   $("#owner_content").empty().append("<%=j render :partial => 'home/owner_content' %>");
   $("#regular_content").empty().append("<%=j render :partial => 'home/regular_content' %>");

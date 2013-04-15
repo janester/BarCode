@@ -18,6 +18,7 @@ font-family: 'Lobster', cursive;
 .reveal-modal {
   border-radius: 20px;
   border: 1px solid red;
+  width: 30%
 }
 
 /* begin: jQuery UI Datepicker emphasis on selected dates */
@@ -62,11 +63,19 @@ ul.center{
 
 .login{
   float: left;
-  padding-right: 75px;
+  padding-right: 5em;
+  &:hover {
+      color: #ff6666;
+  }
+}
+
+#add_venue_btn{
+  padding-right: 5em;
 }
 
 .login_info{
   float: right;
+  font-size: 3em;
   font-family: 'Lobster', cursive;
 }
 
@@ -109,3 +118,46 @@ fieldset{
   margin-top: 100px;
 }
 
+.success
+{
+  font-family: 'Cabin', sans-serif;
+}
+
+.bar_btns{
+  float: left;
+  width: 12em;
+}
+
+.venue_availabilities{
+  font-family: 'Cabin', sans-serif;
+}
+
+#new_venue{
+  width: 35em;
+}
+
+#new_venue_form_head{
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+}
+
+.schedule_btns{
+  width: 15em;
+}
+
+.main_user_btn{
+  padding-right: 5em;
+}
+
+#user_crawls{
+  font-family: 'Lobster', cursive;
+}
+
+li{
+  height: 250px;
+  width: 250px;
+    background-color: black;
+      &:hover {
+          color: #ff6666;
+      }
+}
