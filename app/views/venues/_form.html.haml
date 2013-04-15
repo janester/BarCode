@@ -8,4 +8,11 @@
     =f.label :image
     =f.file_field :image
     =f.text_field :remote_image_url
+    %p Select All Categories That Apply:
+    %ul.large-block-grid-3
+      -@categories.each do |cat|
+        %li
+          %span= check_box_tag("venue[category_ids][]", cat.id, cat.in?(@venue.categories))
+          %span= cat.name
+
     =f.submit

@@ -13,6 +13,7 @@ gem 'rmagick'
 gem 'remotipart'
 gem 'titleize'
 gem 'aws-ses'
+gem 'stamp'
 
 
 

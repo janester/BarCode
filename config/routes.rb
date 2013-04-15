@@ -18,4 +18,9 @@ Barcode::Application.routes.draw do
       get "end_times"
     end
   end
+  resources :stops, :except => [:show, :index] do
+    collection do
+      post "num_stops"
+    end
+  end
 end
