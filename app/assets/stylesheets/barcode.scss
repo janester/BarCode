@@ -64,6 +64,9 @@ ul.center{
 .login{
   float: left;
   padding-right: 5em;
+  &:hover {
+      color: #ff6666;
+  }
 }
 
 #add_venue_btn{
@@ -136,4 +139,25 @@ fieldset{
 #new_venue_form_head{
   font-family: 'Lobster', cursive;
   font-size: 2em;
+}
+
+.schedule_btns{
+  width: 15em;
+}
+
+.main_user_btn{
+  padding-right: 5em;
+}
+
+#user_crawls{
+  font-family: 'Lobster', cursive;
+}
+
+li{
+  height: 250px;
+  width: 250px;
+    background-color: black;
+      &:hover {
+          color: #ff6666;
+      }
 }
