@@ -14,7 +14,7 @@
 #
 
 class Venue < ActiveRecord::Base
-  attr_accessible :address, :image, :latitude, :longitude, :name, :user_id, :remote_image_url
+  attr_accessible :address, :image, :latitude, :longitude, :name, :user_id, :remote_image_url, :category_ids
   has_and_belongs_to_many :categories
   has_many :activities
   has_many :stops

@@ -1,0 +1,7 @@
+.row
+  .large-4.large-centered.columns
+    %p How many stops would you like to make?
+    =form_tag num_stops_stops_path, :remote => true do
+      =number_field_tag :num_stops
+      =hidden_field_tag :crawl, @crawl.id
+      =submit_tag

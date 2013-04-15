@@ -8,4 +8,13 @@ window.app =
       type: "get"
       url: "pub_crawls/end_times?start_time=#{start}"
     $.ajax(settings)
+
+
 $(document).ready(app.ready)
+
+# %script
+#   $(function() {
+#     $( ".draggable" ).draggable();
+#     $( "#droppable" ).droppable({
+#       drop: function( event, ui ) {
+#         $( this ).addClass("ui-state-highlight");};});});

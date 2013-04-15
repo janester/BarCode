@@ -25,4 +25,12 @@ class PubCrawlsController < ApplicationController
       @end_times << [a,a]
     end
   end
+
+  def create
+    p = PubCrawl.create(params[:pub_crawl])
+    p.start_time = params[:start_time]
+    p.end_time = params[:end_times]
+    p.save
+    @crawl = p
+  end
 end

@@ -1,6 +1,7 @@
 class VenuesController < ApplicationController
   def new
     @venue = Venue.new
+    @categories = Category.order(:name)
   end
 
   def create
@@ -9,6 +10,7 @@ class VenuesController < ApplicationController
 
   def edit
     @venue = Venue.find(params[:id])
+    @categories = Category.order(:name)
   end
 
   def update
