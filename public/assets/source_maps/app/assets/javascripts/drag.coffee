@@ -12,7 +12,8 @@ window.make =
           _.reject make.stops, (x) -> x.spot == $(this).attr("id")
           make.stops.push({spot:$(this).attr("id"), bar:ui.draggable.data().id}))
 
-  send_stops: ->
+  send_stops: (e) ->
+    e.preventDefault()
     token = $("input[name=authenticity_token]").val()
     cid = $("#cid").text()
     settings =

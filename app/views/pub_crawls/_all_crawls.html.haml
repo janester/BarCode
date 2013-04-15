@@ -4,6 +4,8 @@
       .row
         .large-12.columns
           %h3= "#{crawl.name.titleize}, #{crawl.date.stamp('Sunday, May 1st')}"
+          -unless @cu.pub_crawls.include?crawl
+            =button_to("Join", join_crawl_pub_crawl_path(crawl.id), :remote => true, :class => "button radius")
       .row
         .large-12.columns
           %p= "Start: #{crawl.start_time.stamp("3:00 AM")} | End: #{crawl.end_time.stamp("3:00 AM")}"

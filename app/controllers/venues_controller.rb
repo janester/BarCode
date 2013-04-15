@@ -5,7 +5,8 @@ class VenuesController < ApplicationController
   end
 
   def create
-    @cu.venues << Venue.create(params[:venue])
+    @venue = Venue.create(params[:venue])
+    @cu.venues << @venue
   end
 
   def edit

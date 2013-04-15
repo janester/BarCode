@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414024055) do
+ActiveRecord::Schema.define(:version => 20130415155514) do
 
   create_table "activities", :force => true do |t|
     t.string   "text"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20130414024055) do
 
   create_table "pub_crawls_users", :id => false, :force => true do |t|
     t.integer "pub_crawl_id"
-    t.integer "item_id"
+    t.integer "user_id"
   end
 
   create_table "responses", :force => true do |t|

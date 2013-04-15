@@ -1,0 +1,5 @@
+var a = $("<a>").addClass("button radius").text("Close");
+$("#modal").empty().append("<p>You're Friends Have Been Invited and a Confirmation Email Has Been Sent to You!</p>").append(a);
+$("#modal").foundation("reveal", "open");
+a.click(function(){$("#modal").foundation("reveal", "close");});
+$("#regular_content").empty().append("<%=j render 'home/regular_content' %>");

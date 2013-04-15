@@ -1,0 +1,12 @@
+=form_tag activities_path, :remote => true do
+  =hidden_field_tag :venue_id, @venue.id
+  %p Enter Instructions or a Question
+  =text_field_tag :question
+  %label Is the Response Text or Photo?
+  .switch.small.round.small-3.small-centered
+    %input#a{:name => "type", :type => "radio", :value => "text"}
+    %label{:for => "a", :onclick => ""} Text
+    %input#a1{:checked => "checked", :name => "type", :type => "radio", :value => "photo"}
+    %label{:for => "a1", :onclick => ""} Photo
+    %span
+  =submit_tag

@@ -1,0 +1,5 @@
+var a = $("<a>").addClass("button radius").text("Close");
+$("#modal").empty().append("<%=j render 'pub_crawls/joined_message' %>").append(a);
+$("#modal").foundation("reveal", "open");
+a.click(function(){$("#modal").foundation("reveal", "close");});
+$("#regular_content").empty().append("<%=j render 'home/regular_content' %>");

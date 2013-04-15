@@ -13,14 +13,20 @@ Barcode::Application.routes.draw do
     end
   end
   resources :availabilities, :only => [:edit, :update, :destroy]
-  resources :pub_crawls, :except => [:index, :show] do
+  resources :pub_crawls, :except => [:index] do
     collection do
       get "end_times"
+      post "invite_friends"
+    end
+    member do
+      post "join_crawl"
     end
   end
-  resources :stops, :except => [:show, :index] do
+  resources :stops, :only => [:create] do
     collection do
       post "num_stops"
     end
   end
+
+  resources :activities, :only => [:create]
 end
