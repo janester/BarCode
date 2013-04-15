@@ -1041,7 +1041,7 @@ small {
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: bold;
-  color: #7f0a0c; }
+  color: #ffe30a; }
 
 /* Lists */
 ul,
@@ -1266,11 +1266,11 @@ button, .button {
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       color: white; }
   button.alert, .button.alert {
-    background-color: #c60f13;
-    border-color: #970b0e;
+    background-color: #ffec56;
+    border-color: #ffe623;
     color: white; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
-      background-color: #970b0e; }
+      background-color: #ffe623; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       color: white; }
   button.large, .button.large {
@@ -1346,19 +1346,19 @@ button, .button {
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         background-color: #5da423; }
     button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
-      background-color: #c60f13;
-      border-color: #970b0e;
+      background-color: #ffec56;
+      border-color: #ffe623;
       color: white;
       cursor: default;
       opacity: 0.6;
       -webkit-box-shadow: none;
       box-shadow: none; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
-        background-color: #970b0e; }
+        background-color: #ffe623; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         color: white; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
-        background-color: #c60f13; }
+        background-color: #ffec56; }
 
 input.button,
 button.button {
@@ -1656,8 +1656,8 @@ fieldset {
 input.error,
 .error textarea,
 textarea.error {
-  border-color: #c60f13;
-  background-color: rgba(198, 15, 19, 0.1); }
+  border-color: #ffec56;
+  background-color: rgba(255, 236, 86, 0.1); }
   .error input:focus,
   input.error:focus,
   .error textarea:focus,
@@ -1667,7 +1667,7 @@ textarea.error {
 
 .error label,
 label.error {
-  color: #c60f13; }
+  color: #ffec56; }
 
 .error small,
 small.error {
@@ -1677,7 +1677,7 @@ small.error {
   margin-bottom: 1em;
   font-size: 0.75em;
   font-weight: bold;
-  background: #c60f13;
+  background: #ffec56;
   color: white; }
 
 /* Custom Checkbox and Radio Inputs */
@@ -2034,7 +2034,7 @@ form.custom {
   .split.button.secondary span:before {
     border-color: white transparent transparent transparent; }
   .split.button.alert span {
-    border-left-color: #7f0a0c; }
+    border-left-color: #ffe30a; }
   .split.button.success span {
     border-left-color: #396516; }
   .split.button.tiny {
@@ -2437,9 +2437,9 @@ form.custom {
       .top-bar-section ul li > a.button.success:hover {
         background: #457a1a; }
     .top-bar-section ul li > a.button.alert {
-      background: #c60f13; }
+      background: #ffec56; }
       .top-bar-section ul li > a.button.alert:hover {
-        background: #970b0e; }
+        background: #ffe623; }
   .top-bar-section ul li.active > a {
     background: #2b2b2b; }
   .top-bar-section .has-form {
@@ -3143,8 +3143,8 @@ form.custom {
     border-color: #457a1a;
     color: white; }
   .alert-box.alert {
-    background-color: #c60f13;
-    border-color: #970b0e;
+    background-color: #ffec56;
+    border-color: #ffe623;
     color: white; }
   .alert-box.secondary {
     background-color: #e9e9e9;
@@ -3233,7 +3233,7 @@ kbd {
     -webkit-border-radius: 1000px;
     border-radius: 1000px; }
   .label.alert {
-    background-color: #c60f13;
+    background-color: #ffec56;
     color: #fff; }
   .label.success {
     background-color: #5da423;
@@ -3403,7 +3403,7 @@ kbd {
     height: 100%;
     display: block; }
   .progress.alert .meter {
-    background: #c60f13;
+    background: #ffec56;
     height: 100%;
     display: block; }
   .progress.radius {

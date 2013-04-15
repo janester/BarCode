@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 @import url(http://fonts.googleapis.com/css?family=Cabin);
 
+<<<<<<< HEAD
 #start
 {
   border: 1px solid black;
@@ -55,3 +56,57 @@ select {
   height: 150px;
 
 }
+
+ul.center{
+  list-style: none;
+}
+
+.login{
+  float: left;
+  padding-right: 75px;
+}
+
+.login_info{
+  float: right;
+  font-family: 'Lobster', cursive;
+}
+
+#register_form{
+  float: left;
+}
+
+.owner_venues{
+  font-family: 'Lobster', cursive;
+}
+
+.venue{
+  font-family: 'Cabin', sans-serif;
+}
+
+.delete_btn{
+  background-color: #FFEC56;
+}
+
+fieldset{
+  height: 450px;
+  background-color: #E3E3E3;
+  width: 400px;
+  float: left;
+  font-family: 'Cabin', sans-serif;
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 10px;
+}
+
+.text_field{
+  border-radius: 10px;
+}
+
+#login_form{
+  height: 175px;
+  margin-left: 27em;
+}
+
+#nav{
+  margin-top: 100px;
+}
+

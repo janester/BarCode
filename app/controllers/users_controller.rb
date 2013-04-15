@@ -3,7 +3,6 @@ class UsersController < ApplicationController
     @user = User.create(params[:user])
     @user.is_owner = params[:is_owner]
     @user.save
-    binding.pry
     if @user.valid?
       session[:user_id] = @user.id
       authenticate
