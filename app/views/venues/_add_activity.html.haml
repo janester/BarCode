@@ -5,9 +5,9 @@
   =text_field_tag :question
   %label Is the Response Text or Photo?
   .switch.small.round.small-3.small-centered
-    %input#a{:name => "type", :type => "radio", :value => "text"}
+    %input#a{:name => "response_type", :type => "radio", :value => "t"}
     %label{:for => "a", :onclick => ""} Text
-    %input#a1{:checked => "checked", :name => "type", :type => "radio", :value => "photo"}
+    %input#a1{:checked => "checked", :name => "response_type", :type => "radio", :value => "p"}
     %label{:for => "a1", :onclick => ""} Photo
     %span
   =submit_tag nil, :class => "button round small"

@@ -6,7 +6,7 @@ class ActivitiesController < ApplicationController
   def create
     @user_type = params[:user_type]
     venue = Venue.find(params[:venue_id])
-    venue.activities << Activity.create(text:params[:question], type:params[:type], venue_id:params[:venue_id])
+    venue.activities << Activity.create(text:params[:question], response_type:params[:response_type], venue_id:params[:venue_id])
     @crawls = PubCrawl.all
   end
 end

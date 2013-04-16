@@ -14,6 +14,8 @@ gem 'remotipart'
 gem 'titleize'
 gem 'aws-ses'
 gem 'stamp'
+gem 'twilio-ruby'
+
 
 
 
