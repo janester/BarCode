@@ -3,7 +3,7 @@
     -if @venues.present?
       %h1 My sources say you are at one of the following venues. Select which one:
       -@venues.each do |venue|
-        .location{style:"font-size:10em;"}
+        .location{style:"font-size:3em;"}
           %a{href:"/check_ins/select_location?venue=#{venue.id}", "data-remote" => "true"}= venue.name
 
     -else

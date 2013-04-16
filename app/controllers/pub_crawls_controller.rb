@@ -1,4 +1,9 @@
 class PubCrawlsController < ApplicationController
+  def index
+    @crawls = PubCrawl.all
+    @venues = Venue.all
+    @x = 4
+  end
   def new
     @crawl = PubCrawl.new
     @times = []

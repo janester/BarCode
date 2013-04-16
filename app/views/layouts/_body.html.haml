@@ -1,12 +1,11 @@
 -if @cu.nil?
   .row
-    .large-1.columns
-    .large-11.columns
-      .nav_tabs
-        %li.divider
-        %li= link_to(image_tag("register_coaster.jpg"), new_user_path, :class => 'login', :remote => true)
-        %li.divider
-        %li= link_to(image_tag("login_coaster.png"), new_session_path, :class => 'login', :id => 'login_coaster', :remote => true)
+    .large-12.columns
+      .row
+        .large-6.columns{style:"text-align:center;"}
+          #register_c= link_to(image_tag("register_coaster.jpg"), new_user_path, :class => 'login', :remote => true)
+        .large-6.columns{style:"text-align:center;"}
+          #login_c= link_to(image_tag("login_coaster.png"), new_session_path, :class => 'login', :id => 'login_coaster', :remote => true)
         / %img{:onmouseout => "this.src='/assets/login_coaster.jpg'", :onmouseover => "this.src='/assets/register_coaster.jpg'", :src => "/assets/login_coaster.jpg"}
 -else
   %ul.nav

@@ -1,0 +1,4 @@
+var a = $("<a>").addClass("close-reveal-modal").text("×");
+$("#modal").empty().append("<%=j render 'venues/add_activity' %>").append(a);
+$("#modal").foundation("reveal", "open");
+a.click(function(){$("#modal").foundation("reveal", "close");});

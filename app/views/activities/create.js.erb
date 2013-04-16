@@ -1,2 +1,6 @@
 $("#modal").foundation("reveal", "close");
-$("#my_venues").empty().append("<%=j render 'venues/my_venues'%>");
+<% if @user_type == "own" %>
+  $("#my_venues").empty().append("<%=j render 'venues/my_venues'%>");
+<% else %>
+  $("#reg_content").empty().append("<%=j render 'pub_crawls/all_crawls'%>");
+<% end %>

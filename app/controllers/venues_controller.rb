@@ -7,6 +7,7 @@ class VenuesController < ApplicationController
   def create
     @venue = Venue.create(params[:venue])
     @cu.venues << @venue
+    @user_type = "own"
   end
 
   def edit
