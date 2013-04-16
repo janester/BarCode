@@ -1,8 +1,15 @@
- User.delete_all
+User.delete_all
 Category.delete_all
+Badge.delete_all
 
 u1 = User.create(name:"Jane Sternbach", email:"janesternbach@gmail.com", password:"abc", password_confirmation:"abc", phone:"+16463275054", is_owner:true, address:"251 W 98th St, New York, NY")
 u2 = User.create(name:"Jane Janerson", email:"janesternbach+1@gmail.com", password:"abc", password_confirmation:"abc", phone:"+16463275054", is_owner:false, address:"251 W 98th St, New York, NY")
+
+b1 = Badge.create(image: '/assets/bartender.svg', name: 'First Check-In', points: '100')
+b2 = Badge.create(image: '/assets/tulip.svg', name: 'Started Pub Crawl', points: '50')
+b3 = Badge.create(image: '/assets/pilsner.svg', name: 'Created a Pub Crawl', points: '500')
+b4 = Badge.create(image: '/assets/pint.svg', name: 'Completed a Challenge', points: '50')
+b5 = Badge.create(image: '/assets/wine.svg', name: 'Added a Challenge', points: '100')
 
 c1 = Category.create(name:"Wine")
 c2 = Category.create(name:"Whiskey")

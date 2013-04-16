@@ -1,6 +1,6 @@
 %h3= "Select the dates your #{@venue.name} promotion will run:"
 =form_tag create_availabilities_venue_path, :remote => true do
-  %fieldset
+  %fieldset.availabilities
     %legend Availabilities
     #calendar{style:"text-align:center;"}
     =label_tag :dates

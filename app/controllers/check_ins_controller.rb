@@ -12,7 +12,6 @@ class CheckInsController < ApplicationController
   end
 
   def select_location
-    binding.pry
     stop = @cu.todays_crawl.stops.where(:venue_id => params[:venue]).first
     a = @cu.check_ins.select{|x| x.stop == stop}
     if stop.present?

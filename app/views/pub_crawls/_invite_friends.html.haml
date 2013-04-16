@@ -2,4 +2,4 @@
 =form_tag invite_friends_pub_crawls_path, :remote => true do
   =hidden_field_tag :crawl, @crawl.id
   =text_area_tag :emails
-  =submit_tag
+  =submit_tag nil, :class => "button round small"

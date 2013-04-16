@@ -1,7 +1,7 @@
 -if @cu.present? && @cu.is_owner
   #add{:style => "text-align:center"}
-    =link_to(image_tag("add_bar_coaster.jpg"), new_venue_path, :remote => true, :id => "add_venue_btn")
-    =link_to(image_tag("add_challenge_coaster.jpg"), '#', :remote => true)
+    =link_to(image_tag("add_bar_coaster.jpg"), new_venue_path, :remote => true, :class => "login")
+    =link_to(image_tag("add_challenge_coaster.jpg"), '#', :class => "login", :remote => true)
   .row
     .large-5.large-centered.columns#venue_form
 
