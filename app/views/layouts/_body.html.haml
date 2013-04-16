@@ -1,0 +1,23 @@
+-if @cu.nil?
+  .row
+    .large-1.columns
+    .large-11.columns
+      .nav_tabs
+        %li.divider
+        %li= link_to(image_tag("register_coaster.jpg"), new_user_path, :class => 'login', :remote => true)
+        %li.divider
+        %li= link_to(image_tag("login_coaster.png"), new_session_path, :class => 'login', :id => 'login_coaster', :remote => true)
+        / %img{:onmouseout => "this.src='/assets/login_coaster.jpg'", :onmouseover => "this.src='/assets/register_coaster.jpg'", :src => "/assets/login_coaster.jpg"}
+-else
+  %ul.nav
+    .row
+      .large-6.columns
+        %li.title
+          %h1 BarCode
+      .large-3.columns
+        .nav_tabs
+          %li= text_field_tag :search, nil, :placeholder => 'search', :id => 'search_placeholder', :class => 'login_info'
+      .large-3.columns
+        .nav_tabs
+          %li= link_to(" #{@cu.name} | ", "#", :class => 'login_info')
+          %li= link_to("Logout", session_index_path, :class => 'login_info', :method => :delete)

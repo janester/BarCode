@@ -1,15 +1,12 @@
-%table{:style => "width: 100%"}
+%table.venue_margin{:style => "width: 100%"}
   %thead
-    %th Date
-    %th Promotion
+    %th.avail_head Date
+    %th.avail_head Promotion
     %th
     %th
   -venue.availabilities.order(:date).each do |ava|
     %tr
-      %td= ava.date
-      %td= ava.promotion
-      %td.schedule_btns= link_to(image_tag("banner.jpg"), edit_availability_path(ava.id), :class => 'schedule_btns', :remote => true)
-      %td.schedule_btns= link_to(image_tag("banner_yellow.jpg"), "/availabilities/#{ava.id}", :method => :delete, :remote => true, :confirm => "Are you sure you want to delete this availability?", :class => "schedule_btns")
-
-
-/ link_to("Delete", "/availabilities/#{ava.id}", :method => :delete, :remote => true, :confirm => "Are you sure you want to delete this availability?", :class => "button radius alert")
+      %td.avail= ava.date
+      %td.avail= ava.promotion
+      %td.schedule_btns= link_to("Edit", edit_availability_path(ava.id), :class => "schedule_btns", :remote => true, :class => "button round")
+      %td.schedule_btns= link_to("Delete", "/availabilities/#{ava.id}", :method => :delete, :remote => true, :confirm => "Are you sure you want to delete this availability?", :class => "button round success")

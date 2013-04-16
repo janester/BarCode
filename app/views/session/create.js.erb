@@ -1,6 +1,6 @@
 <% if @cu.present? %>
-  $("#uforms").empty().text("Cheers!").fadeOut(3000);
-  $("#nav").empty().append("<%=j render :partial => 'layouts/nav' %>");
+  $("#uforms").empty().text("Cheers!").fadeOut(7000);
+  $("#nav_body").empty().append("<%=j render :partial => 'layouts/body' %>");
   $("#owner_content").empty().append("<%=j render :partial => 'home/owner_content' %>");
   $("#regular_content").empty().append("<%=j render :partial => 'home/regular_content' %>");
   $("#checkin_content").empty().append("<%=j render 'check_ins/checkin_content' %>");

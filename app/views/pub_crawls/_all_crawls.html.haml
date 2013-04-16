@@ -11,11 +11,12 @@
           %p= "Start: #{crawl.start_time.stamp("3:00 AM")} | End: #{crawl.end_time.stamp("3:00 AM")}"
       .row
         .large-12.columns
-          %h5 Sarting Location:
+          %h5 Starting Location:
       .row
-        -venue = crawl.stops.first.venue
-        .large-6.columns
-          = image_tag(venue.image.thumb.url)
-        .large-6.columns
-          %h3= venue.name
-          %p= venue.address
+        -if crawl.stops.length != 0
+          -venue = crawl.stops.first.venue
+          .large-6.columns
+            = image_tag(venue.image.thumb.url)
+          .large-6.columns
+            %h3= venue.name
+            %p= venue.address
