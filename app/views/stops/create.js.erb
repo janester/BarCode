@@ -2,4 +2,4 @@ var a = $("<a>").addClass("close-reveal-modal").text("×");
 $("#modal").empty().append("<%=j render 'pub_crawls/invite_friends' %>").append(a);
 $("#modal").foundation("reveal", "open");
 a.click(function(){$("#modal").foundation("reveal", "close");});
-$("#regular_content").empty().append("<%=j render 'home/regular_content' %>");
+$("#reg_content").empty()
