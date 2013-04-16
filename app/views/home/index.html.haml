@@ -1,10 +1,14 @@
 .row
-  .large-12.columns#owner_content
+  .large-12.columns.show-for-large-up#owner_content
     =render :partial => "home/owner_content"
 / .row
 /   .large-12.columns
 /     =render :partial => "stops/make_stops"
 
 .row
-  .large-12.columns#regular_content
+  .large-12.columns.show-for-large-up#regular_content
     =render :partial => "home/regular_content"
+
+.row
+  .large-12.colums.show-for-medium-down#checkin_content
+    = render 'check_ins/checkin_content'

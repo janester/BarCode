@@ -27,6 +27,10 @@ Barcode::Application.routes.draw do
       post "num_stops"
     end
   end
-
   resources :activities, :only => [:create]
+  resources :check_ins, :only => [:create, :new] do
+    collection do
+      get "select_location"
+    end
+  end
 end

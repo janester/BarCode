@@ -17,4 +17,14 @@ class Stop < ActiveRecord::Base
   belongs_to :activity
   has_many :check_ins
   has_many :responses
+
+  def next_stop
+    stops = self.pub_crawl.stops
+    index = stops.index(self)
+    if stops.length == index+1
+      return nil
+    else
+      return stops[index+1]
+    end
+  end
 end

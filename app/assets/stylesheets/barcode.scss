@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 @import url(http://fonts.googleapis.com/css?family=Cabin);
 
+$small-screen: emCalc(768px);
+$medium-screen: emCalc(1280px);
+$large-screen: emCalc(1440px);
+
 #start
 {
   border: 1px solid black;
@@ -163,4 +167,5 @@ fieldset{
 }
 
 }*/
+
 

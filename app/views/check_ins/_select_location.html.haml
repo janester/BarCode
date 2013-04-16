@@ -1,0 +1,11 @@
+.row
+  .large-6.large-centered.columns
+    -if @venues.present?
+      %h1 My sources say you are at one of the following venues. Select which one:
+      -@venues.each do |venue|
+        .location{style:"font-size:10em;"}
+          %a{href:"/check_ins/select_location?venue=#{venue.id}", "data-remote" => "true"}= venue.name
+
+    -else
+      %h1 We Couldn't Find You. Try Again?
+      =link_to("Check-in!", "#", :class => "button radius large expand", :id => "checkin_btn")

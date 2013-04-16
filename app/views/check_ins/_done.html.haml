@@ -1,0 +1,8 @@
+.row
+  .large-6.large-centered.columns
+    -if @venue.present? && @venue != "already"
+      %h1= "You have successfully checked-in at #{@venue.name}! You should recieve a text with your activity momentarily! Go have fun!"
+    -elsif @venue.present? && @venue == "already"
+      %h1= "You've already checked-in at #{@stop.venue.name}! Stop being on your phone! Go get drunk!"
+    -else
+      %h1= "You are not on a Pub Crawl! Please join a Pub Crawl to check-in."

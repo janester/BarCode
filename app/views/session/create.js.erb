@@ -3,6 +3,8 @@
   $("#nav").empty().append("<%=j render :partial => 'layouts/nav' %>");
   $("#owner_content").empty().append("<%=j render :partial => 'home/owner_content' %>");
   $("#regular_content").empty().append("<%=j render :partial => 'home/regular_content' %>");
+  $("#checkin_content").empty().append("<%=j render 'check_ins/checkin_content' %>");
+
 <% else %>
   $("#uforms").effect("shake", 200)
 <% end %>

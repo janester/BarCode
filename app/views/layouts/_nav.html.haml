@@ -22,7 +22,7 @@
 /         %li.divider
 /         %li= link_to("Logout", session_index_path, :class => 'login', :method => :delete)
 .row
-  .large-twelve.columns
+  .large-12.columns
     %ul.center
       -if @cu.nil?
         %li.divider
@@ -33,6 +33,11 @@
         %li= link_to(" #{@cu.name}", "#", :class => 'login_info')
         %li.divider
         %li= link_to("Logout | ", session_index_path, :class => 'login_info', :method => :delete)
+/ .row.show-for-medium-down{style:"margin:20px 10px 20px 0px;"}
+/   .large-12.columns
+/     -if @cu.present?
+/       = link_to(" | Logout", session_index_path, :class => 'login_info', :method => :delete)
+/       = link_to(" #{@cu.name}", "#", :class => 'login_info')
 
 / .row
 /   .large-twelve.columns

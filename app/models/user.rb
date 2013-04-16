@@ -21,4 +21,8 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :pub_crawls
   has_many :check_ins
   has_many :venues
+
+  def todays_crawl
+    self.pub_crawls.where(:date => Date.today).first
+  end
 end
