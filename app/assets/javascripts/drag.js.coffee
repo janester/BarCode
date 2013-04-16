@@ -8,9 +8,13 @@ window.make =
     _.each($(".drop"), (x) ->
       $(x).droppable
         drop: (event, ui) ->
+          tolerance: "touch"
           $(this).addClass("ui-state-highlight")
           _.reject make.stops, (x) -> x.spot == $(this).attr("id")
-          make.stops.push({spot:$(this).attr("id"), bar:ui.draggable.data().id}))
+          make.stops.push({spot:$(this).attr("id"), bar:ui.draggable.data().id})
+        out: (event, ui) ->
+          $(this).removeClass("ui-state-highlight")
+          console.log("something"))
 
   send_stops: ->
     token = $("input[name=authenticity_token]").val()

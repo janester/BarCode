@@ -18,7 +18,7 @@ font-family: 'Lobster', cursive;
 .reveal-modal {
   border-radius: 20px;
   border: 1px solid red;
-  width: 30%
+/*  width: auto;*/
 }
 
 /* begin: jQuery UI Datepicker emphasis on selected dates */
@@ -76,20 +76,33 @@ ul.center{
 }
 
 .login_info{
-  float: right;
+  float: left;
   font-size: 1em;
   font-family: 'Lobster', cursive;
+  margin-top: 2em;
 }
 
 #register_form{
   float: left;
 }
 
-.owner_venues{
+#register{
+  margin-left: 4em;
+}
+
+.secondary_display{
   font-family: 'Lobster', cursive;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 3em;
 }
 
 .venue{
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+}
+
+.venue_info{
   font-family: 'Cabin', sans-serif;
 }
 
@@ -113,7 +126,7 @@ fieldset{
 
 #login_form{
   height: 175px;
-  margin-left: 27em;
+  margin-left: 31em;
 }
 
 .nav
@@ -137,7 +150,8 @@ fieldset{
 }
 
 #new_venue{
-  width: 35em;
+  width: 31em;
+  height: 20em;
 }
 
 #new_venue_form_head{
@@ -148,14 +162,10 @@ fieldset{
 .schedule_btns{
   width: 15em;
 }
-
-.main_user_btn{
+/*
+.main_user_btns{
   padding-right: 5em;
-}
-
-#user_crawls{
-  font-family: 'Lobster', cursive;
-}
+}*/
 
 #search_placeholder{
   width: 15em;
@@ -168,4 +178,62 @@ fieldset{
 /*  color: white;
   background-color: #1f66b4;*/
   font-family: 'Cabin', sans-serif;
+}
+
+#howmany{
+  font-family: 'Cabin', sans-serif;
+}
+
+.availabilities{
+
+  width: 30em;
+}
+
+h5.availabilities{
+  font-family: 'Cabin', sans-serif;
+  font-size: 2em;
+}
+
+.avail{
+  font-size: 1em;
+}
+
+.avail_head{
+  font-size: 1.25em;
+  font-weight: bolder;
+}
+
+.nav_tabs{
+  list-style: none;
+}
+
+.title{
+  list-style: none;
+}
+
+.divider{
+  list-style: none;
+}
+
+.drop{
+  font-size: 10em;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  background-color: #e3bb4c;
+}
+
+.venue_margin{
+  margin-bottom: 5em;
+}
+
+.mine{
+  background-color: #A7D4D9;
+}
+
+#cid {
+  color: white;
+}
+
+.ui-state-highlight{
+  background: #1f66b4;
 }

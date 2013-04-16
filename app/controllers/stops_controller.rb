@@ -6,7 +6,6 @@ class StopsController < ApplicationController
   end
 
   def create
-    binding.pry
     stops = params[:stops].to_a.map{|x| x[1]}.reverse
     crawl = PubCrawl.find(params[:crawl])
     drops = []
