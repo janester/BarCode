@@ -11,5 +11,4 @@
         %li
           %span= check_box_tag("venue[category_ids][]", cat.id, cat.in?(@venue.categories))
           %span= cat.name
-
-    =f.submit
+    =f.submit nil, :class => "button round small"

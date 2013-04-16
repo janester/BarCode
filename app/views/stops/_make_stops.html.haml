@@ -1,16 +1,22 @@
 =javascript_include_tag "drag"
 
+
 .row
   .large-12.columns
     =button_to("Cheers!", "#", :class => "button radius", :id => "done_btn")
+
+.row
+  .large-5.columns
+    %h3.dragdrop Choose your bars
+    %ul.large-block-grid-2
+      -@venues.each do |venue|
+        %li
+          = image_tag(venue.image.thumb.url, :class => "draggable", :"data-id" => venue.id)
+
+  .large-7.columns
+    %h3.dragdrop= "...and drop them here!"
     #cid= @crawl.id
-    %ul.large-block-grid-3
+    %ul.large-block-grid-2
       -@x.times do |i|
         %li
           .drop{:id => "droppable#{i}"}= i+1
-
-
-.row
-  .large-12.columns
-    -@venues.each do |venue|
-      = image_tag(venue.image.thumb.url, :class => "draggable", :"data-id" => venue.id)
