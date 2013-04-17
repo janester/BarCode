@@ -2,6 +2,7 @@ window.app =
   ready: ->
     $("body").on("change", "#start_time", app.add_end_times)
     $("body").on("click", "#checkin_btn", app.get_location)
+    $("body").on("click", "#mobile_check_in_btn", app.get_location)
   add_end_times: ->
     start = $("#start_time").val()
     settings =

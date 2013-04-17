@@ -3,7 +3,6 @@ class CheckInsController < ApplicationController
   end
 
   def create
-    binding.pry
     a = [params[:latitude], params[:longitude]]
     @venues = Venue.near(a, 10, :order => :distance)
     @venues.select{|x| @cu.todays_crawl.venues.include?x}
