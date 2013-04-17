@@ -1,0 +1,11 @@
+.row#mobile_logo
+  .small-12.columns
+    =image_tag("barcode_logo_blue.png", :class => 'mobile_logo_img')
+.row
+  .small-12.columns.mobile_logo_text
+    %p BarCode
+#mobile_login_form
+  =form_tag session_index_path, :remote => true do
+    =text_field_tag :email, nil, :class => 'text_field', :placeholder => 'Email'
+    =password_field_tag :password, nil, :class => 'text_field', :placeholder => 'Password'
+    =submit_tag :Login, :class => 'button round small', :id => "mobile_login_btn"

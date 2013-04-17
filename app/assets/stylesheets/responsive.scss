@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
+#mobile_check_in_btn {
+  width: 100%;
+  text-align: center;
+  img {
+    width: 75%;
+    margin-left: 7em;
+  }
+}
+
+#mobile_form {
+  font-size: 3em;
+}
+
+#mobile_nav {
+  font-size: 4em;
+  height: 2em;
+  font-family: 'Lobster', cursive;
+  color: #1f66b4;
+
+}
+
+#mobile_locations {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+  p {
+    margin-bottom: 0px;
+  }
+  #mobile_locations_list {
+    ul {
+      a {
+        font-size: 0.75em;
+        font-family: 'Cabin', sans-serif;
+      }
+      line-height: 1em;
+    }
+  }
+}
+
+#mobile_session {
+  width: 100%;
+  font-size: 3em;
+  #mobile_login_form {
+    position: relative;
+    top: -2.25em;
+    #mobile_login_btn {
+      margin-left: 10em;
+    }
+
+  }
+}
+
+#mobile_logo {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.mobile_logo_img {
+  width: 100%;
+  position: relative;
+  top: -2em;
+  margin-left: 0.50em;
+
+}
+.mobile_logo_text {
+  p {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    margin-bottom: 0px;
+    color: #1f66b4;
+    // background-color: white;
+    position: relative;
+    top: -1em;
+    margin-left: 1.50em;
+  }
+}
+
+.strokeme
+{
+    color: white;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+

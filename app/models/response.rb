@@ -2,16 +2,19 @@
 #
 # Table name: responses
 #
-#  id         :integer          not null, primary key
-#  type       :string(255)
-#  user_id    :integer
-#  stop_id    :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id            :integer          not null, primary key
+#  user_id       :integer
+#  stop_id       :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  response_type :string(255)
+#  image         :string(255)
 #
 
 class Response < ActiveRecord::Base
-  attr_accessible :stop_id, :type, :user_id
+  attr_accessible :stop_id, :response_type, :user_id, :image, :remote_image_url, :text
   belongs_to :user
   belongs_to :stop
+  mount_uploader :image, ResponseImageUploader
+
 end

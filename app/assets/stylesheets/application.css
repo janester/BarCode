@@ -12,5 +12,6 @@
  *= require 'foundation_4/css/foundation.min.css'
  *= require 'jquery-ui/css/eggplant/jquery-ui-1.10.2.custom.min.css'
  *= require 'barcode'
+ *= require 'responsive'
 
  */

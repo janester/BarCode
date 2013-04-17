@@ -2,12 +2,13 @@
 #
 # Table name: responses
 #
-#  id         :integer          not null, primary key
-#  type       :string(255)
-#  user_id    :integer
-#  stop_id    :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id            :integer          not null, primary key
+#  user_id       :integer
+#  stop_id       :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  response_type :string(255)
+#  image         :string(255)
 #
 
 require 'spec_helper'

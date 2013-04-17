@@ -1,25 +1,37 @@
--if @cu.nil?
-  .row
-    .large-12.columns.hide-for-large-down
+#desktop_nav.hide-for-large-down
+  -if @cu.nil?
+    .row{style:"margin-top:3em;"}
+      .large-12.columns.hide-for-large-down
+        .row
+          .large-6.columns{style:"text-align:center;"}
+            #register_c= link_to(image_tag("register_coaster.jpg"), new_user_path, :class => 'login', :id => 'register_coaster', :remote => true)
+          .large-6.columns{style:"text-align:center;"}
+            #login_c= link_to(image_tag("login_coaster.png"), new_session_path, :class => 'login', :id => 'login_coaster', :remote => true)
+          / %img{:onmouseout => "this.src='/assets/login_coaster.jpg'", :onmouseover => "this.src='/assets/register_coaster.jpg'", :src => "/assets/login_coaster.jpg"}
+  -else
+    %ul.nav
       .row
-        .large-6.columns{style:"text-align:center;"}
-          #register_c= link_to(image_tag("register_coaster.jpg"), new_user_path, :class => 'login', :id => 'register_coaster', :remote => true)
-        .large-6.columns{style:"text-align:center;"}
-          #login_c= link_to(image_tag("login_coaster.png"), new_session_path, :class => 'login', :id => 'login_coaster', :remote => true)
-        / %img{:onmouseout => "this.src='/assets/login_coaster.jpg'", :onmouseover => "this.src='/assets/register_coaster.jpg'", :src => "/assets/login_coaster.jpg"}
--else
-  %ul.nav
-    .row
-      .large-6.columns
-        %li.title
-          =image_tag("barcode_logo_blue.jpg", :class => 'logo_img')
-        %li
-          =image_tag("barcode_text_blue.png", :class => 'logo_text')
-          / %h3.logo BarCode
-      .large-3.columns
-        .nav_tabs
-          %li= text_field_tag :search, nil, :placeholder => 'search', :id => 'search_placeholder', :class => 'login_info'
-      .large-3.columns
-        .nav_tabs
-          %li= link_to(" #{@cu.name} | ", "#", :class => 'login_info')
-          %li= link_to("Logout", session_index_path, :class => 'login_info', :method => :delete)
+        .large-6.columns
+          %li.title
+            =image_tag("barcode_logo_blue.jpg", :class => 'logo_img')
+          %li
+            =image_tag("barcode_text_blue.png", :class => 'logo_text')
+            / %h3.logo BarCode
+        .large-3.columns
+          .nav_tabs
+            %li= text_field_tag :search, nil, :placeholder => 'search', :id => 'search_placeholder', :class => 'login_info'
+        .large-3.columns
+          .nav_tabs
+            %li= link_to(" #{@cu.name} | ", "#", :class => 'login_info')
+            %li= link_to("Logout", session_index_path, :class => 'login_info', :method => :delete)
+
+
+.row
+  #mobile_nav.show-for-medium-down
+    -if @cu.present?
+      .row
+        .small-7.columns
+          #mobile_logo BarCode
+        .small-5.columns
+          #mobile_logout= link_to("Logout", session_index_path, :method => :delete)
+

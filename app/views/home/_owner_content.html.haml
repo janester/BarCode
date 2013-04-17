@@ -1,12 +1,14 @@
 -if @cu.present? && @cu.is_owner
-  #add{:style => "text-align:center"}
-    =link_to(image_tag("add_bar_coaster.jpg"), new_venue_path, :remote => true, :class => "login", :class => 'add_bar_coaster')
-    / =link_to(image_tag("add_challenge_coaster.jpg"), '#', :class => "login", :remote => true)
-    %h2.secondary_display.dashboard Owner Dashboard
-    %p.description From here, you can manage events at the venues you own.  Click the button to the left to add your bar to the BarCode roster.  Then, choose the dates and times you want to make your venue be available for events.
-    %p.description Quinoa actually selvage, banjo locavore chambray brooklyn intelligentsia pitchfork high life gluten-free ugh mumblecore banh mi. Gastropub 90's ethical selfies raw denim, pug umami mixtape salvia keytar. Master cleanse photo booth street art tonx carles.
   .row
-    .large-5.large-centered.columns#venue_form
+    .large-6.columns
+      #add{:style => "text-align:center; position:relative; top: 30px;"}
+        =link_to(image_tag("add_bar_coaster.jpg"), new_venue_path, :remote => true, :class => "login")
+    .large-6.columns
+      %h2.secondary_display.dashboard Owner Dashboard
+      %p.description From here, you can manage events at the venues you own.  Click the button to the left to add your bar to the BarCode roster.  Then, choose the dates and times you want to make your venue be available for events.
+      %p.description Quinoa actually selvage, banjo locavore chambray brooklyn intelligentsia pitchfork high life gluten-free ugh mumblecore banh mi. Gastropub 90's ethical selfies raw denim, pug umami mixtape salvia keytar. Master cleanse photo booth street art tonx carles.
+  / .row
+  /   .large-5.large-centered.columns#venue_form
 
   .row
     .large-12.columns

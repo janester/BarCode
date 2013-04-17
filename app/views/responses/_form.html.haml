@@ -1,0 +1,15 @@
+#mobile_form
+  -if @activity.response_type == "t"
+    %p= "You were asked answer the following question: #{@activity.text}"
+    %p Enter your response below
+    =form_tag responses_path, :remote => true do
+      =hidden_field_tag :activity, @activity.id
+      =text_area_tag :text
+      =submit_tag
+  -else
+    %p= "You were asked to perform the following task: #{@activity.text}"
+    %p Please upload your photo as proof below
+    =form_tag responses_path, :html => {:multipart => true}, :remote => true do
+      =hidden_field_tag :activity, @activity.id
+      =file_field_tag :image
+      =submit_tag
