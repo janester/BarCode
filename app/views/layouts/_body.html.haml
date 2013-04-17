@@ -12,7 +12,10 @@
     .row
       .large-6.columns
         %li.title
-          %h1 BarCode
+          =image_tag("barcode_logo_blue.jpg", :class => 'logo_img')
+        %li
+          =image_tag("barcode_text_blue.png", :class => 'logo_text')
+          / %h3.logo BarCode
       .large-3.columns
         .nav_tabs
           %li= text_field_tag :search, nil, :placeholder => 'search', :id => 'search_placeholder', :class => 'login_info'
