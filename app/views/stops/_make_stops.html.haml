@@ -1,10 +1,5 @@
 =javascript_include_tag "drag"
 
-
-.row
-  .large-12.columns
-    =button_to("Cheers!", "#", :class => "button radius", :id => "done_btn")
-
 .row
   .large-5.columns
     %h3.dragdrop Choose your bars
@@ -15,8 +10,11 @@
 
   .large-7.columns
     %h3.dragdrop= "...and drop them here!"
-    #cid= @crawl.id
     %ul.large-block-grid-2
       -@x.times do |i|
         %li
           .drop{:id => "droppable#{i}"}= i+1
+    #cid= @crawl.id
+.row
+  .large-12.columns
+    =button_to("Let's Do This", "#", :class => "button radius", :id => "done_btn")
