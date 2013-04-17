@@ -1,7 +1,8 @@
 -if @cu.present? && @cu.is_owner == false
   =button_to("Check-In", "#", :class => "button large expand", :id => "mobile_check_in_btn")
-  =link_to("Submit Challenge Response", new_response_path, :class => "button large expand", :remote => true)
+  =link_to("Submit Challenge Response", new_response_path, :class => "button large expand", :remote => true, :id => "mobile_response_button")
 -elsif @cu.present? && @cu.is_owner
   %h1 Please sign in on a non-touch screen
 -else
-  = render 'session/form'
+  #mobile_session
+    = render 'session/form'

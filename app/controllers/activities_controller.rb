@@ -4,6 +4,7 @@ class ActivitiesController < ApplicationController
     @user_type = "reg"
   end
   def create
+    binding.pry
     @user_type = params[:user_type]
     venue = Venue.find(params[:venue_id])
     venue.activities << Activity.create(text:params[:question], response_type:params[:response_type], venue_id:params[:venue_id])
