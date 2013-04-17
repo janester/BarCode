@@ -1,6 +1,6 @@
 =form_for @crawl, :remote => true do |f|
   %fieldset.new_crawl
-    %legend New Pub Crawl
+    %legend.new_pub_crawl New Pub Crawl
     =f.label :name
     =f.text_field :name
     =f.label :date
@@ -8,4 +8,4 @@
     =f.label :start_time
     =select_tag :start_time, options_for_select(@times)
     =f.label :end_time, :id => "end_time_label", :class => "hide"
-    =f.submit nil, :class => 'button round'
+    =f.submit nil, :class => 'button round small'

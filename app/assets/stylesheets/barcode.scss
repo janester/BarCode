@@ -43,9 +43,9 @@ select {
   display: hidden;
 }
 
-/*#register_form{
-  float: right;
-}*/
+#register_form{
+  margin-top: 10em;
+}
 
 .drop {
   width: 100%;
@@ -94,7 +94,6 @@ ul.center{
 .secondary_display{
   font-family: 'Lobster', cursive;
   margin-top: 2em;
-  margin-bottom: 1em;
   font-size: 3em;
 }
 
@@ -127,6 +126,7 @@ fieldset{
 
 #login_form{
   height: 175px;
+  margin-top: 10em;
 }
 
 .nav
@@ -271,4 +271,35 @@ h5.availabilities{
 
 ul.large-block-grid-2{
   margin-top: 2.15em;
+}
+
+.new_pub_crawl{
+  font-family: 'Lobster', cursive;
+/*  font-size: 2em;*/
+}
+
+.venue_panel{
+  padding-top: 4em;
+}
+
+.description{
+  font-family: 'Cabin', sans-serif;
+  padding-left:  31em;
+}
+
+.dashboard{
+  padding-left: 10em;
+}
+
+#nav_body{
+/*  margin-top: 10em;*/
+  margin-left: 5em;
+}
+
+#register_coaster{
+  margin-top: 10em;
+}
+
+#login_coaster{
+  margin-top: 10em;
 }

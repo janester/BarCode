@@ -1,13 +1,14 @@
 -if @cu.present? && @cu.is_owner == false
   .row
-    .large-4.columns.login
-      = link_to("All Crawls", pub_crawls_path, :class => "button radius large expand", :remote => true)
-      / =link_to("Make a Pub Crawl", new_pub_crawl_path, :remote => true, :class => "button radius")
-    .large-4.columns
-      =link_to(image_tag("create_crawl_coaster.png"), new_pub_crawl_path, :class => 'login', :remote => true)
     .large-4.columns
       #button{style:"text-align:center"}
-        =link_to("Check-in!", "#", :class => "button radius large expand", :id => "checkin_btn")
+        / =link_to("Check-in!", "#", :class => "button radius large expand", :id => "checkin_btn")
+        =link_to(image_tag("checkin.png"), "#", :class => 'login', :remote => true)
+    .large-4.columns
+      =link_to(image_tag("create_crawl_coaster.png"), new_pub_crawl_path, :class => 'login', :remote => true)
+    .large-4.columns.login
+      / = link_to("All Crawls", pub_crawls_path, :class => "button radius large expand", :remote => true)
+      =link_to(image_tag("allcrawls.png"), pub_crawls_path, :class => 'login', :remote => true)
   .row
     .large-12.columns
       #reg_content

@@ -4,6 +4,8 @@ Badge.delete_all
 
 u1 = User.create(name:"Jane Sternbach", email:"janesternbach@gmail.com", password:"abc", password_confirmation:"abc", phone:"+16463275054", is_owner:true, address:"251 W 98th St, New York, NY")
 u2 = User.create(name:"Jane Janerson", email:"janesternbach+1@gmail.com", password:"abc", password_confirmation:"abc", phone:"+16463275054", is_owner:false, address:"251 W 98th St, New York, NY")
+u1 = User.create(name:"Jillian Youngblood", email:"jillian.youngblood+1@gmail.com", password:"abc", password_confirmation:"abc", phone:"+19175759275", is_owner:true, address:"1 Plaza Street West, Brooklyn, NY")
+u2 = User.create(name:"Jill Youngblood", email:"jillian.youngblood@gmail.com", password:"abc", password_confirmation:"abc", phone:"+19175759275", is_owner:false, address:"1 Plaza Street West, Brooklyn, NY")
 
 b1 = Badge.create(image: '/assets/bartender.svg', name: 'First Check-In', points: '100')
 b2 = Badge.create(image: '/assets/tulip.svg', name: 'Started Pub Crawl', points: '50')
