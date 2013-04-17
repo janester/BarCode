@@ -13,7 +13,7 @@
       .row
         .large-6.columns
           %li.title
-            =image_tag("barcode_logo_blue.jpg", :class => 'logo_img')
+            =image_tag("barcode_logo_blue.png", :class => 'logo_img')
           %li
             =image_tag("barcode_text_blue.png", :class => 'logo_text')
             / %h3.logo BarCode
@@ -31,7 +31,7 @@
     -if @cu.present?
       .row
         .small-7.columns
-          #mobile_logo BarCode
+          #mobile_logo= link_to("BarCode", root_path)
         .small-5.columns
           #mobile_logout= link_to("Logout", session_index_path, :method => :delete)
 

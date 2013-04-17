@@ -1,8 +1,9 @@
 -if @cu.present? && @cu.is_owner == false
   =link_to(image_tag("checkin.png"), "#", :id => "mobile_check_in_btn")
-  =link_to("Submit Challenge Response", new_response_path, :class => "button large expand", :remote => true, :id => "mobile_response_button")
+  =link_to(image_tag("challenge.png"), new_response_path, :remote => true, :id => "mobile_response_button")
 -elsif @cu.present? && @cu.is_owner
   %h1 Please sign in on a non-touch screen
 -else
   #mobile_session
     = render 'session/mobile_form'
+

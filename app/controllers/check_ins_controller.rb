@@ -4,7 +4,7 @@ class CheckInsController < ApplicationController
 
   def create
     a = [params[:latitude], params[:longitude]]
-    @venues = Venue.near(a, 10, :order => :distance)
+    @venues = Venue.near(a, 0.2, :order => :distance)
     @venues.select{|x| @cu.todays_crawl.venues.include?x}
     if @venues.present?
       @cu.check_ins << CheckIn.create(latitude:params[:latitude], longitude:params[:longitude])

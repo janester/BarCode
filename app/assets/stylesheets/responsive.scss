@@ -1,17 +1,32 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster);
-@import url(http://fonts.googleapis.com/css?family=Cabin);
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic);
 
-#mobile_check_in_btn {
+#mobile_check_in_btn, #mobile_response_button {
   width: 100%;
   text-align: center;
   img {
     width: 75%;
-    margin-left: 7em;
+    margin-left: 9em;
   }
 }
 
 #mobile_form {
-  font-size: 3em;
+  font-size: 4em;
+  text-align: center;
+  line-height: 1em;
+  p {
+    font-family: 'Cabin', sans-serif;
+  }
+  p.lob {
+    font-family: 'Lobster', cursive;
+  }
+  #file {
+    margin-left: 4em;
+    margin-bottom: 1em;
+    #bar_pic {
+
+    }
+  }
 }
 
 #mobile_nav {
@@ -26,7 +41,8 @@
   font-family: 'Lobster', cursive;
   font-size: 5em;
   p {
-    margin-bottom: 0px;
+    margin-bottom: 0.5em;
+    line-height: 1.25em;
   }
   #mobile_locations_list {
     ul {
@@ -76,14 +92,40 @@
   }
 }
 
-.strokeme
-{
-    color: white;
-    text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000;
+#mobile_done_checkin {
+  p {
+    font-family: 'Lobster', cursive;
+    font-size: 5em;
+    text-align: center;
+    line-height: 1.25em;
+  }
+  #fun {
+    font-family: 'Cabin', sans-serif;
+    font-size: 4em;
+  }
+}
+
+#mobile_recieved {
+  text-align: center;
+  width: 100%;
+  font-size: 3em;
+  font-family: 'Cabin', sans-serif;
+  p.cab {
+    font-family: 'Lobster', cursive;
+    font-size: 2.25em;
+    margin-bottom: 0.5em;
+  }
+  #response_pic {
+    margin-bottom: 1em;
+    img {
+      width: 10em;
+    }
+  }
+  #response_text {
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
 }
 
 

@@ -1,2 +1,10 @@
-%h1 We got your response! Your coupon and next location are on their way to you!
-=link_to("Log Out", session_index_path, :method => :delete, :class => "button large")
+#mobile_recieved
+  %p.cab We got your response!
+
+  -if @cu.responses.last.response_type == "t"
+    %p#response_text= "#{@cu.responses.last.text}"
+  -else
+    #response_pic= image_tag(@cu.responses.last.image)
+
+  %p Expect a text with your coupon and next location!
+  =link_to("Log Out", session_index_path, :method => :delete, :class => "button round small", :id => "mobile_log_out_btn")

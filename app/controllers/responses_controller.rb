@@ -6,9 +6,9 @@ class ResponsesController < ApplicationController
   def create
     stop = @cu.check_ins.last.stop
     if params[:text].nil?
-      @cu.responses << Response.create(image:params[:image], stop_id:stop.id)
+      @cu.responses << Response.create(image:params[:image], stop_id:stop.id, response_type:"p")
     else
-      @cu.responses << Response.create(text:params[:text], stop_id:stop.id)
+      @cu.responses << Response.create(text:params[:text], stop_id:stop.id, response_type:"t")
     end
     promotion = stop.venue.availabilities.where(:date => Date.today).first.promotion
     p = (1..10).to_a.shuffle.sample(3).join + promotion.upcase.gsub("!","").gsub(" ", "")
