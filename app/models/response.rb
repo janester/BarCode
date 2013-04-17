@@ -12,7 +12,7 @@
 #
 
 class Response < ActiveRecord::Base
-  attr_accessible :stop_id, :response_type, :user_id, :image, :remote_image_url
+  attr_accessible :stop_id, :response_type, :user_id, :image, :remote_image_url, :text
   belongs_to :user
   belongs_to :stop
   mount_uploader :image, ResponseImageUploader
