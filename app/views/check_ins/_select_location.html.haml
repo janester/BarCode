@@ -11,5 +11,5 @@
                   %a{href:"/check_ins/select_location?venue=#{venue.id}", "data-remote" => "true"}= venue.name
 
     -else
-      %h1 We Couldn't Find You. Try Again?
+      %p We Couldn't Find You. Try Again?
       =link_to("Check-in!", "#", :class => "button radius large expand", :id => "checkin_btn")
