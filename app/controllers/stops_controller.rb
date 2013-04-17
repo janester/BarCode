@@ -17,7 +17,8 @@ class StopsController < ApplicationController
     drops = drops.sort
     drops.each do |x|
       index = stops.index{|y| y[:spot] == x}
-      crawl.stops << Stop.create(venue_id:stops[index][:bar])
+      venue = Venue.find(stops[index][:bar])
+      crawl.stops << Stop.create(venue_id:venue.id, activity_id:venue.activities.sample.id)
     end
     @crawls = PubCrawl.all
     @crawl = crawl

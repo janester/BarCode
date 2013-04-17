@@ -33,4 +33,5 @@ Barcode::Application.routes.draw do
       get "select_location"
     end
   end
+  resources :responses, :only => [:create, :new]
 end
