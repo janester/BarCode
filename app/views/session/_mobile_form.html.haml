@@ -1,0 +1,5 @@
+#mobile_login_form
+  =form_tag session_index_path, :remote => true do
+    =text_field_tag :email, nil, :class => 'text_field', :placeholder => 'Email'
+    =password_field_tag :password, nil, :class => 'text_field', :placeholder => 'Password'
+    =submit_tag :Login, :class => 'button round small'

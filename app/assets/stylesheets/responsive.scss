@@ -1,8 +1,46 @@
-#mobile_check_in_btn, #mobile_response_button {
-  font-size: 5em;
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
+#mobile_check_in_btn {
+  width: 100%;
+  text-align: center;
+  img {
+    width: 75%;
+    margin-left: 7em;
+  }
 }
 
 #mobile_form {
   font-size: 3em;
 }
+
+#mobile_nav {
+  font-size: 4em;
+  height: 2em;
+}
+
+#mobile_locations {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+  p {
+    margin-bottom: 0px;
+  }
+  #mobile_locations_list {
+    ul {
+      a {
+        font-size: 0.75em;
+        font-family: 'Cabin', sans-serif;
+      }
+      line-height: 1em;
+    }
+  }
+}
+
+#mobile_session {
+  width: 100%;
+  font-size: 3em;
+  #mobile_login_form {
+  }
+}
+
 

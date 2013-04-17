@@ -4,7 +4,6 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    binding.pry
     stop = @cu.check_ins.last.stop
     if params[:text].nil?
       @cu.responses << Response.create(image:params[:image], stop_id:stop.id)
@@ -18,8 +17,9 @@ class ResponsesController < ApplicationController
     client.account.sms.messages.create(:from => ENV['TW_NUM'], :to => @cu.phone, :body => body)
     if stop.next_stop.present?
       nxt = stop.next_stop
-      address = nxt.venue.address.gsub(" ", "+")
-      body = "Here are the directions to your next stop: http://maps.google.com/maps?daddr=#{address}"
+      daddress = nxt.venue.address.gsub(" ", "+")
+      # saddress = @cu.check_ins.last.
+      body = "Here are the directions to your next stop: http://maps.google.com/maps?daddr=#{daddress}"
       client.account.sms.messages.create(:from => ENV['TW_NUM'], :to => @cu.phone, :body => body)
     else
       body = "Congrats! You finished your Pub Crawl!"

@@ -1,10 +1,14 @@
 .row
-  .large-6.large-centered.columns
+  .small-12.columns#mobile_locations
     -if @venues.present?
-      %h1 My sources say you are at one of the following venues. Select which one:
-      -@venues.each do |venue|
-        .location{style:"font-size:3em;"}
-          %a{href:"/check_ins/select_location?venue=#{venue.id}", "data-remote" => "true"}= venue.name
+      %p My sources say you are at one of the following venues. Select which one:
+      .row
+        .small-10.small-offset-2.columns#mobile_locations_list
+          %ul
+            -@venues.each do |venue|
+              %li
+                .location
+                  %a{href:"/check_ins/select_location?venue=#{venue.id}", "data-remote" => "true"}= venue.name
 
     -else
       %h1 We Couldn't Find You. Try Again?
