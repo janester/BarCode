@@ -18,8 +18,10 @@ class ResponsesController < ApplicationController
     if stop.next_stop.present?
       nxt = stop.next_stop
       daddress = nxt.venue.address.gsub(" ", "+")
-      # saddress = @cu.check_ins.last.
-      body = "Here are the directions to your next stop: http://maps.google.com/maps?daddr=#{daddress}"
+      a = @cu.check_ins.last.latitude
+      b = @cu.check_ins.last.longitude
+      saddress = "#{a},#{b}"
+      body = "Here are the directions to your next stop: http://maps.google.com/maps?daddr=#{daddress}&saddr=#{saddress}"
       client.account.sms.messages.create(:from => ENV['TW_NUM'], :to => @cu.phone, :body => body)
     else
       body = "Congrats! You finished your Pub Crawl!"
