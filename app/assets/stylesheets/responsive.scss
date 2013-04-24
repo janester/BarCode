@@ -2,6 +2,17 @@
 @import url(http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:400italic,700italic,400,700);
 
+@font-face {
+    font-family: 'Lobster13Regular';
+    src: font-url('Lobster_1.3-webfont.eot');
+    src: font-url('Lobster_1.3-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('Lobster_1.3-webfont.woff') format('woff'),
+         font-url('Lobster_1.3-webfont.ttf') format('truetype'),
+         font-url('Lobster_1.3-webfont.svg#Lobster13Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 #mobile_check_in_btn, #mobile_response_button {
   width: 100%;
@@ -21,9 +32,7 @@
     font-style: normal;
   }
   p.lob {
-    font-family: 'Lobster Two', cursive;
-    font-weight: bold;
-    font-style: italic;
+    font-family: 'Lobster13Regular';
   }
   #file {
     margin-left: 4em;
@@ -37,17 +46,13 @@
 #mobile_nav {
   font-size: 4em;
   height: 2em;
-  font-family: 'Lobster Two', cursive;
-  font-weight: bold;
-  font-style: italic;
+  font-family: 'Lobster13Regular';
   color: #1f66b4;
 
 }
 
 #mobile_locations {
-  font-family: 'Lobster Two', cursive;
-  font-weight: bold;
-  font-style: italic;
+  font-family: 'Lobster13Regular';
   font-size: 5em;
   p {
     margin-bottom: 0.5em;
@@ -91,9 +96,7 @@
 }
 .mobile_logo_text {
   p {
-    font-family: 'Lobster Two', cursive;
-    font-weight: bold;
-    font-style: italic;
+    font-family: 'Lobster13Regular';
     font-size: 3em;
     margin-bottom: 0px;
     color: #1f66b4;
@@ -106,9 +109,7 @@
 
 #mobile_done_checkin {
   p {
-    font-family: 'Lobster Two', cursive;
-    font-weight: bold;
-    font-style: italic;
+    font-family: 'Lobster13Regular';
     font-size: 5em;
     text-align: center;
     line-height: 1.25em;
