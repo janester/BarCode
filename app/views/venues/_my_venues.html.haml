@@ -5,9 +5,9 @@
     .large-9.columns
       %h3.venue= venue.name
       %p.venue_info= venue.address
-      = link_to(image_tag("edit_bar_btn.jpg"), edit_venue_path(venue.id), :class => 'bar_btns', :remote => true)
-      = link_to(image_tag("delete_bar_btn.jpg"), "/venues/#{venue.id}", :class => 'bar_btns', :method => :delete, :remote => true, :confirm => "Are you sure you want to delete this venue?")
-      = link_to(image_tag("avail_bar_btn.jpg"), new_availabilities_venue_path(venue.id), :class => 'bar_btns', :remote => true)
+      = link_to(image_tag("edit_bar_btn2.png"), edit_venue_path(venue.id), :class => 'bar_btns', :remote => true)
+      = link_to(image_tag("delete_bar_btn2.png"), "/venues/#{venue.id}", :class => 'bar_btns', :method => :delete, :remote => true, :confirm => "Are you sure you want to delete this venue?")
+      = link_to(image_tag("avail_bar_btn2.png"), new_availabilities_venue_path(venue.id), :class => 'bar_btns', :remote => true)
   .row
     .large-12.columns
       %p= "Categories: #{venue.categories.map(&:name).join(", ")}"

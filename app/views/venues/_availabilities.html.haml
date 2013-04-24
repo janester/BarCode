@@ -14,7 +14,7 @@
 %ul.large-block-grid-4
   -venue.availabilities.order(:date).each do |ava|
     %li
-      #ava
+      #ava.crawl_list
         %p= "Promotion: #{ava.promotion}"
         %p= "Date: #{ava.date}"
         .schedule_btns

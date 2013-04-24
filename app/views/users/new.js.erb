@@ -1,1 +1,2 @@
 $("#register_c").empty().append("<%=j render :partial => 'users/form' %>");
+$("#login_c").empty().append("<%=j link_to(image_tag('login_coaster2.png'), new_session_path, :class => 'login', :id => 'login_coaster', :remote => true) %>")
