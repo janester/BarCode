@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 @import url(http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:400italic,700italic,400,700);
+
 
 #mobile_check_in_btn, #mobile_response_button {
   width: 100%;
@@ -16,9 +18,12 @@
   line-height: 1em;
   p {
     font-family: 'Cabin', sans-serif;
+    font-style: normal;
   }
   p.lob {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+    font-style: italic;
   }
   #file {
     margin-left: 4em;
@@ -32,13 +37,17 @@
 #mobile_nav {
   font-size: 4em;
   height: 2em;
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster Two', cursive;
+  font-weight: bold;
+  font-style: italic;
   color: #1f66b4;
 
 }
 
 #mobile_locations {
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster Two', cursive;
+  font-weight: bold;
+  font-style: italic;
   font-size: 5em;
   p {
     margin-bottom: 0.5em;
@@ -49,6 +58,7 @@
       a {
         font-size: 0.75em;
         font-family: 'Cabin', sans-serif;
+        font-style: normal;
       }
       line-height: 1em;
     }
@@ -81,7 +91,9 @@
 }
 .mobile_logo_text {
   p {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+    font-style: italic;
     font-size: 3em;
     margin-bottom: 0px;
     color: #1f66b4;
@@ -94,13 +106,16 @@
 
 #mobile_done_checkin {
   p {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+    font-style: italic;
     font-size: 5em;
     text-align: center;
     line-height: 1.25em;
   }
   #fun {
     font-family: 'Cabin', sans-serif;
+    font-style: normal;
     font-size: 4em;
   }
 }
@@ -110,8 +125,11 @@
   width: 100%;
   font-size: 3em;
   font-family: 'Cabin', sans-serif;
+  font-style: normal;
   p.cab {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+    font-style: italic;
     font-size: 2.25em;
     margin-bottom: 0.5em;
   }
