@@ -11,17 +11,18 @@
   -else
     %ul.nav
       .row
-        .large-5.columns
+        .large-4.columns
           %li.title
             =image_tag("barcode_logo_blue.png", :class => 'logo_img')
           %li
             =image_tag("barcode_text_blue.png", :class => 'logo_text')
             / %h3.logo BarCode
         .large-3.columns
-        .large-4.columns
+        .large-5.columns
           .nav_tabs
-            %li= link_to(" #{@cu.name} | ", "#", :class => 'login_info')
-            %li= link_to("Logout", session_index_path, :class => 'login_info', :method => :delete)
+            %li
+              = link_to(" #{@cu.name} | ", "#", :class => 'login_info')
+              = link_to("Logout", session_index_path, :class => 'login_info', :method => :delete)
 
 
 .row
