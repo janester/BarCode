@@ -1,8 +1,8 @@
 <% if @user.valid? %>
-  $("#uforms").empty()
-  $("#nav").empty().append("<%=j render :partial => 'layouts/nav' %>");
+  $("#nav_body").empty().append("<%=j render :partial => 'layouts/body' %>");
   $("#owner_content").empty().append("<%=j render :partial => 'home/owner_content' %>");
   $("#regular_content").empty().append("<%=j render :partial => 'home/regular_content' %>");
+  $("#mobile_content").empty().append("<%=j render :partial => 'home/mobile_content' %>");
 <% else %>
   $("#uforms").effect("shake", 200)
 <% end %>
