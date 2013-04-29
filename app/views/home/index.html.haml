@@ -1,16 +1,16 @@
 .row
-  .large-12.columns.show-for-large-up#owner_content
+  .large-12.columns.show-for-medium-up.hide-for-small#owner_content
     =render :partial => "home/owner_content"
 / .row
 /   .large-12.columns
 /     =render :partial => "stops/make_stops"
 
 .row
-  .large-12.columns.show-for-large-up#regular_content
+  .large-12.columns.show-for-medium-up.hide-for-small#regular_content
     =render :partial => "home/regular_content"
 
 .row
-  .large-12.columns.show-for-medium-down#mobile_content
+  .large-12.columns.show-for-small.hide-for-medium-up#mobile_content
     = render :partial => "mobile_content"
 
 

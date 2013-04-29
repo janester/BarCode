@@ -1,7 +1,7 @@
 #desktop_nav.show-for-large-up
   -if @cu.nil?
     .row{style:"margin-top:3em;"}
-      .large-12.columns.hide-for-large-down
+      .large-12.columns.show-for-medium-up.hide-for-small
         .row
           .large-6.columns
             #register_c= link_to(image_tag("register_coaster2.png"), new_user_path, :class => 'login', :id => 'register_coaster', :remote => true)
@@ -25,7 +25,7 @@
 
 
 .row
-  #mobile_nav.show-for-medium-down
+  #mobile_nav.show-for-small.hide-for-medium-up
     -if @cu.present?
       .row
         .small-7.columns
