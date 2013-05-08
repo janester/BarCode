@@ -1,7 +1,7 @@
-#desktop_nav.show-for-large-up
+#desktop_nav.hide-for-touch
   -if @cu.nil?
     .row{style:"margin-top:3em;"}
-      .large-12.columns.hide-for-touch
+      .large-12.columns
         .row
           .large-6.columns
             #register_c= link_to(image_tag("register_coaster2.png"), new_user_path, :class => 'login', :id => 'register_coaster', :remote => true)
@@ -18,10 +18,9 @@
             =image_tag("barcode_text_blue.png", :class => 'logo_text')
             / %h3.logo BarCode
         .large-4.columns
-        .large-6.columns
-          %div
-            = link_to(" #{@cu.name} | ", "#", :class => 'login_info')
-            = link_to("Logout", session_index_path, :class => 'login_info', :method => :delete)
+        .large-6.columns.text-right
+          = link_to(" #{@cu.name} | ", "#", :class => 'login_info')
+          = link_to("Logout", session_index_path, :class => 'login_info', :method => :delete)
 
 
 .row
@@ -30,6 +29,6 @@
       .row
         .small-7.columns
           #mobile_logo= link_to("BarCode", root_path)
-        .small-5.columns
+        .small-5.columns{style:"text-align:right !important;"}
           #mobile_logout= link_to("Logout", session_index_path, :method => :delete)
 
