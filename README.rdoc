@@ -5,6 +5,6 @@ Owners can add their venues and allow those venues to be available on certain da
 Users can join pub crawls or create pub crawls (and invite their friends).
 Once on the pub crawl users can use the mobile interface to checkin, recieve their scavenger hunt activity, upload your scavenger hunt results, and recieve the pub crawl promotion and directions to the next bar.
 
-URL: http://barcodenyc.herokuapp.com/
+URL: http://barcodenyc.herokuapp.com
 
 
