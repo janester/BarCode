@@ -1,4 +1,4 @@
-%h3= "Select the dates your #{@venue.name} promotion will run:"
+%h3{style:"text-shadow:none;"}= "Select the dates your #{@venue.name} promotion will run:"
 =form_tag create_availabilities_venue_path, :remote => true do
   %fieldset.availabilities
     %legend Availabilities

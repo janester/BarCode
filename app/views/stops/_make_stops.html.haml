@@ -14,7 +14,7 @@
       -@x.times do |i|
         %li
           .drop{:id => "droppable#{i}"}= i+1
-    #cid= @crawl.id
+    #cid.hide= @crawl.id
 .row
   .large-12.columns
     =button_to("Let's Do This", "#", :class => "button radius", :id => "done_btn")
