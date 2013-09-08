@@ -13,4 +13,11 @@
 class Availability < ActiveRecord::Base
   attr_accessible :date, :promotion, :venue_id
   belongs_to :venue
+  validate :one_availability_per_day_per_venue
+
+  def one_availability_per_day_per_venue
+    if self.venue.availabilities.map(&:date).include?(self.date)
+      self.errors.add(:uniqueness, "only one availability per venue per day")
+    end
+  end
 end

@@ -33,7 +33,7 @@ class VenuesController < ApplicationController
     dates = params[:dates].split(",")
     venue = Venue.find(params[:id])
     dates.each do |date|
-      venue.availabilities << Availability.create(date:date, promotion:params[:promotion])
+      Availability.create(date:date, promotion:params[:promotion], venue_id:venue.id)
     end
     @venue = venue
   end

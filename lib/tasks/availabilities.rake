@@ -2,8 +2,7 @@ namespace "bc" do
   desc "Creates Availabilities For Pub Crawls"
   task :make_avail => :environment do
     Venue.all.each do |venue|
-      a = Availability.create(date:Date.today, promotion:"free jamaican beef patty")
-      venue.availabilities << a
+      a = Availability.create(date:Date.today, promotion:"free jamaican beef patty", venue_id:venue.id)
       puts "Added availability #{a.id} to #{venue.name}"
     end
   end
